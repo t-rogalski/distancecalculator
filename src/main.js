@@ -1,5 +1,8 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import './GeoForm.css';
+import './App.css';
+import './Result.css';
+import 'leaflet/dist/leaflet.css';
 
-createApp(App).mount('#app')
+createApp(App).mount('#app');

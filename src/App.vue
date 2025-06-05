@@ -1,30 +1,33 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div style="display: flex">
+    <div style="flex: 1">
+      <GeoForm @calculated="handleCalculated" />
+      <ResultDisplay v-if="result" :result="result" />
+    </div>
+    <div style="flex: 1">
+      <MapDisplay v-if="showMap" :lat1="coords.lat1" :lon1="coords.lon1" :lat2="coords.lat2" :lon2="coords.lon2" />
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup>
+import { ref } from 'vue';
+import GeoForm from './components/GeoForm.vue';
+import ResultDisplay from './components/ResultDisplay.vue';
+import MapDisplay from './components/MapDisplay.vue';
+
+const result = ref(null);
+const coords = ref({ lat1: 0, lon1: 0, lat2: 0, lon2: 0 });
+const showMap = ref(false);
+
+function handleCalculated(data) {
+  result.value = data;
+  coords.value = {
+    lat1: data.lat1,
+    lon1: data.lon1,
+    lat2: data.lat2,
+    lon2: data.lon2,
+  };
+  showMap.value = true;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+</script>
