@@ -19,11 +19,14 @@ form {
   flex-direction: column;
   border: 3px solid #3aaadc;
   border-radius: 10px;
-  margin: 2rem 40vw;
+  margin: 2rem 40rem;
   padding: clamp(1rem, 3vw, 2rem);
   padding-bottom: clamp(1.5rem, 3vw, 3rem);
   transition: margin 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  max-width: fit-content;
+}
+
+.rolling {
+  margin: 2rem clamp(0.5rem, 5vw, 4rem);
 }
 
 .formWrapper {
@@ -49,8 +52,4 @@ button {
 button:hover {
   background-color: hsl(199, 70%, 5%);
   cursor: pointer;
-}
-
-.rolling {
-  margin: 2rem clamp(0.5rem, 5vw, 4rem);
 }
