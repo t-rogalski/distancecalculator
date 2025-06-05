@@ -65,3 +65,7 @@ body {
   padding: 0;
   font-family: 'Lato', Arial, sans-serif;
 }
+
+.mapContainer {
+  margin: 2rem;
+}

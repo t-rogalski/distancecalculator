@@ -2,10 +2,10 @@
   <div style="display: flex">
     <div style="flex: 1">
       <GeoForm @calculated="handleCalculated" />
-      <ResultDisplay v-if="result" :result="result" />
     </div>
-    <div style="flex: 1">
+    <div class="mapContainer" style="flex: 1">
       <MapDisplay v-if="showMap" :lat1="coords.lat1" :lon1="coords.lon1" :lat2="coords.lat2" :lon2="coords.lon2" />
+      <ResultDisplay v-if="result" :result="result" />
     </div>
   </div>
 </template>

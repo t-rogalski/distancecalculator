@@ -1,16 +1,16 @@
 .coords {
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 5vw, 3rem);
   padding: 2rem;
 }
 
 .coords > div > input {
-  max-width: 200px;
+  width: clamp(150px, 20vw, 250px);
   margin: 0.5rem 0;
   padding: 0.5rem;
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
 form {
@@ -19,9 +19,11 @@ form {
   flex-direction: column;
   border: 3px solid #3aaadc;
   border-radius: 10px;
-  padding: 2rem;
-  margin: 2rem 30rem;
+  margin: 2rem 40vw;
+  padding: clamp(1rem, 3vw, 2rem);
+  padding-bottom: clamp(1.5rem, 3vw, 3rem);
   transition: margin 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: fit-content;
 }
 
 .formWrapper {
@@ -37,8 +39,8 @@ form {
 button {
   border: none;
   border-radius: 10px;
-  padding: 1rem;
-  font-size: 1rem;
+  padding: clamp(0.5rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   color: white;
   background-color: #3aaadc;
   transition: background-color 0.5s ease;
@@ -50,5 +52,5 @@ button:hover {
 }
 
 .rolling {
-  margin: 2rem 4rem;
+  margin: 2rem clamp(0.5rem, 5vw, 4rem);
 }
