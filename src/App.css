@@ -65,34 +65,11 @@ body {
   font-family: 'Lato', Arial, sans-serif;
 }
 
-/* .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.formContainer {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  margin: 2rem;
-}
-
-.mapContainer {
-  margin: 2rem;
-  flex: 0;
-  transition: flex 1s;
-}
-
-.mapcontainer .shifted {
-  flex: auto;
-} */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .formContainer {
@@ -109,9 +86,9 @@ body {
   width: 0;
   flex: 0;
   opacity: 0;
-  overflow: hidden;
   transition: flex 1s, width 1s, opacity 1.5s;
   margin: clamp(0.5rem, 3vw, 2rem);
+  gap: 10px;
 }
 
 .container.shifted .mapContainer {

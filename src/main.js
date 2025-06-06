@@ -4,6 +4,7 @@ import './GeoForm.css';
 import './App.css';
 import './Result.css';
 import './MapDisplay.css';
+import './Navbar.css';
 import 'leaflet/dist/leaflet.css';
 
 createApp(App).mount('#app');

@@ -1,11 +1,14 @@
+<!-- Obsługa przycisku -->
+
 <template>
   <div class="result">
-    <h2><strong>Odległość:</strong></h2>
-    <p>{{ result.meters.toFixed(2) }} metrów</p>
-    <p>{{ result.kilometers.toFixed(3) }} kilometrów</p>
+    <button @click="toggleUnit">Przełącz na {{ unit === 'km' ? 'metry' : 'kilometry' }}</button>
+    <div>
+      Aktualna jednostka: <strong>{{ unit === 'km' ? 'kilometry' : 'metry' }}</strong>
+    </div>
   </div>
 </template>
 
 <script setup>
-defineProps(['result']);
+const props = defineProps(['result', 'unit', 'toggleUnit']);
 </script>

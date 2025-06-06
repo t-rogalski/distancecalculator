@@ -29,6 +29,7 @@ const lon1 = ref('');
 const lat2 = ref('');
 const lon2 = ref('');
 
+//Pobranie danych z form
 const emit = defineEmits(['calculated']);
 const calculateDistance = async () => {
   const res = await fetch('http://localhost:8000/distance.php', {
