@@ -15,7 +15,7 @@
         :distanceM="result.meters"
         :unit="unit"
       />
-      <ResultDisplay v-if="result" :result="result" :unit="unit" :toggleUnit="toggleUnit" />
+      <UnitButton v-if="result" :result="result" :unit="unit" :toggleUnit="toggleUnit" />
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@
 <script setup>
 import { ref } from 'vue';
 import GeoForm from './components/GeoForm.vue';
-import ResultDisplay from './components/ResultDisplay.vue';
+import UnitButton from './components/UnitButton.vue';
 import MapDisplay from './components/MapDisplay.vue';
 import Navbar from './components/Navbar.vue';
 

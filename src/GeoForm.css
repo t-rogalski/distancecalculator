@@ -20,13 +20,13 @@ input::-webkit-inner-spin-button {
 
 form {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   border: 3px solid #3aaadc;
   border-radius: 10px;
   padding: clamp(1rem, 3vw, 2rem);
   padding-bottom: clamp(1.5rem, 3vw, 3rem);
+  max-height: fit-content;
 }
 
 .input {
