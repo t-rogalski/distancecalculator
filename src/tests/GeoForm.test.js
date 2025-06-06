@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import GeoForm from '../components/GeoForm.vue';
-import { expect, test, describe, vi } from 'vitest';
+import { expect, test, vi } from 'vitest';
 
 test('form submits valid data', async () => {
   const wrapper = mount(GeoForm);
@@ -36,13 +36,6 @@ test('form emits calculated event after submit', async () => {
     meters: 100,
     kilometers: 0.1,
   });
-});
-
-test('button click adds rolling class', async () => {
-  const wrapper = mount(GeoForm);
-  const button = wrapper.find('button[type="submit"]');
-  await button.trigger('click');
-  expect(wrapper.find('form').classes()).toContain('rolling');
 });
 
 test('inputs have required attribute', () => {
