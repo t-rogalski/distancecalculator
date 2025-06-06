@@ -1,5 +1,66 @@
-# Vue 3 + Vite
+# Kalkulator Odległości
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Aplikacja webowa do obliczania odległości pomiędzy dwoma punktami geograficznymi na mapie.  
+Projekt wykonany w ramach zadania rekrutacyjnego.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Funkcjonalności
+
+- Wprowadzanie współrzędnych dwóch punktów (A i B)
+- Obliczanie odległości w kilometrach i metrach (backend PHP)
+- Przełączanie jednostek (km/metry)
+- Wizualizacja punktów i linii na mapie (Leaflet)
+- Responsywny interfejs użytkownika
+- Rozwijane menu nawigacyjne
+
+## Technologie
+
+- **Frontend:** Vue 3 + Vite
+- **Mapa:** Leaflet
+- **Backend:** PHP (API do obliczania odległości)
+- **Testy:** Vitest, Vue Test Utils
+
+## Uruchomienie lokalne
+
+1. **Klonuj repozytorium:**
+   ```bash
+   git clone https://github.com/t-rogalski/kalkulatorodleglosci.git
+   cd kalkulatorodleglosci
+   ```
+
+2. **Zainstaluj zależności:**
+   ```bash
+   npm install
+   ```
+
+3. **Uruchom aplikację (frontend + backend PHP):**
+   ```bash
+   npm run dev
+   ```
+   - Frontend: http://localhost:5173
+   - Backend PHP: http://localhost:8000
+
+4. **Otwórz przeglądarkę i przejdź na** [http://localhost:5173](http://localhost:5173)
+
+## Struktura projektu
+
+- `src/` – kod źródłowy aplikacji Vue
+- `src/components/` – komponenty Vue (formularz, mapa, navbar, wynik)
+- `src/assets/` – zasoby statyczne (czcionki, obrazki)
+- `backend/` – plik PHP do obliczania odległości
+- `tests/` – testy jednostkowe
+
+## Testowanie
+
+Aby uruchomić testy jednostkowe:
+```bash
+npm run test
+```
+
+## Autor
+
+Projekt wykonał Tomasz Rogalski  
+Wykonano w ramach zadania rekrutacyjnego.
+
+---
+
+Dziękuję za poświęcony czas na zapoznanie się z projektem!
