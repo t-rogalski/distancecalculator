@@ -11,9 +11,10 @@ const props = defineProps({
   lon1: Number,
   lat2: Number,
   lon2: Number,
+  distanceKm: Number,
 });
 
-let map, markerA, markerB;
+let map, markerA, markerB, line;
 
 onMounted(() => {
   map = L.map('map').setView([props.lat1, props.lon1], 5);
@@ -32,6 +33,13 @@ onMounted(() => {
     ],
     { color: 'red', weight: 4 }
   ).addTo(map);
+
+  line.on('click', function (e) {
+    L.popup()
+      .setLatLng(e.latlng)
+      .setContent(`Odległość: ${props.distanceKm.toFixed(3)} km`)
+      .openOn(map);
+  });
 });
 
 watch(

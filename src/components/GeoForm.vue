@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="formWrapper"> -->
   <form @submit.prevent="calculateDistance">
     <div class="coords">
       <div class="input">
@@ -19,9 +18,8 @@
         <input v-model.number="lon2" type="number" step="any" min="0" max="180" placeholder="Długość" required />
       </div>
     </div>
-    <button type="submit" @click="addRollingClass">Oblicz odległość</button>
+    <button type="submit">Oblicz odległość</button>
   </form>
-  <!-- </div> -->
 </template>
 
 <script setup>
@@ -30,7 +28,6 @@ const lat1 = ref('');
 const lon1 = ref('');
 const lat2 = ref('');
 const lon2 = ref('');
-const isRolling = ref(false);
 
 const emit = defineEmits(['calculated']);
 const calculateDistance = async () => {

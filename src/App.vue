@@ -4,7 +4,14 @@
       <GeoForm @calculated="handleCalculated" />
     </div>
     <div class="mapContainer">
-      <MapDisplay v-if="showMap" :lat1="coords.lat1" :lon1="coords.lon1" :lat2="coords.lat2" :lon2="coords.lon2" />
+      <MapDisplay
+        v-if="showMap"
+        :lat1="coords.lat1"
+        :lon1="coords.lon1"
+        :lat2="coords.lat2"
+        :lon2="coords.lon2"
+        :distanceKm="result.kilometers"
+      />
       <ResultDisplay v-if="result" :result="result" />
     </div>
   </div>
