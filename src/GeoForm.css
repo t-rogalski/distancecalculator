@@ -1,8 +1,8 @@
 .coords {
   display: flex;
   flex-direction: column;
-  font-size: clamp(1.75rem, 5vw, 3rem);
-  padding: 2rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  padding: clamp(0.5rem, 5vw, 1.5rem);
 }
 
 .coords > div > input {
@@ -11,6 +11,11 @@
   padding: 0.5rem;
   border-radius: 10px;
   font-size: clamp(1rem, 5vw, 2rem);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 form {

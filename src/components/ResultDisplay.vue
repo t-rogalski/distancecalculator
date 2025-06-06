@@ -1,12 +1,7 @@
 <!-- Obsługa przycisku -->
 
 <template>
-  <div class="result">
-    <button @click="toggleUnit">Przełącz na {{ unit === 'km' ? 'metry' : 'kilometry' }}</button>
-    <div>
-      Aktualna jednostka: <strong>{{ unit === 'km' ? 'kilometry' : 'metry' }}</strong>
-    </div>
-  </div>
+  <button @click="toggleUnit">Przełącz na {{ unit === 'km' ? 'metry' : 'kilometry' }}</button>
 </template>
 
 <script setup>
