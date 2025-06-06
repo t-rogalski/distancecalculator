@@ -1,7 +1,7 @@
 .coords {
   display: flex;
   flex-direction: column;
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-size: clamp(2rem, 5vw, 2.5rem);
   padding: clamp(0.5rem, 5vw, 1.5rem);
 }
 
@@ -10,7 +10,7 @@
   margin: 0.5rem 0;
   padding: 0.5rem;
   border-radius: 10px;
-  font-size: clamp(1rem, 5vw, 2rem);
+  font-size: clamp(1.25rem, 5vw, 2rem);
 }
 
 input::-webkit-outer-spin-button,
@@ -20,6 +20,7 @@ input::-webkit-inner-spin-button {
 
 form {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   border: 3px solid #3aaadc;
@@ -36,8 +37,8 @@ form {
 button {
   border: none;
   border-radius: 10px;
-  padding: clamp(0.5rem, 3vw, 1.5rem);
-  font-size: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1.25rem, 3vw, 2rem);
   color: white;
   background-color: #3aaadc;
   transition: background-color 0.5s ease;
