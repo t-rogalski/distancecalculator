@@ -204,3 +204,8 @@ nav a {
 .submenu li a:hover {
   color: black;
 }
+
+.signin:hover {
+  color: #3aaadc;
+  text-decoration: underline;
+}

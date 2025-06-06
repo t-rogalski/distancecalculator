@@ -12,7 +12,7 @@
           <p>Infolinia:</p>
           <a href="#">(22) 19654 </a>
         </div>
-        <a href="#">ZALOGUJ SIĘ</a>
+        <a href="#" class="signin">ZALOGUJ SIĘ</a>
         <button class="signup">ZAŁÓŻ KONTO</button>
       </div>
       <div class="navdown">
