@@ -47,13 +47,12 @@ onMounted(() => {
     { color: 'red', weight: 4 }
   ).addTo(map);
 
-  const midLat = (props.lat1 + props.lat2) / 2;
-  const midLon = (props.lon1 + props.lon2) / 2;
+  //Środek do wyświetlania okienka
+  const midPoint = line.getCenter();
 
-  //Odległość wyświetlana na start
-  showLinePopup(midLat, midLon);
+  showLinePopup(midPoint.lat, midPoint.lng);
 
-  //Odległość na kliknięcie
+  //Wyświetla odległość przez kliknięcie
   line.on('click', function (e) {
     L.popup()
       .setLatLng(e.latlng)
@@ -70,9 +69,27 @@ watch(
       markerA.setLatLng([newLat1, newLon1]);
       markerB.setLatLng([newLat2, newLon2]);
       map.setView([newLat1, newLon1], 5);
-      const midLat = (newLat1 + newLat2) / 2;
-      const midLon = (newLon1 + newLon2) / 2;
-      showLinePopup(midLat, midLon);
+
+      // Usuń starą linię jeśli istnieje
+      if (line) {
+        map.removeLayer(line);
+      }
+      // Narysuj nową linię
+      line = L.polyline(
+        [
+          [newLat1, newLon1],
+          [newLat2, newLon2],
+        ],
+        { color: 'red', weight: 4 }
+      ).addTo(map);
+
+      // Dodaj obsługę kliknięcia na nowej linii
+      line.on('click', function (e) {
+        L.popup().setLatLng(e.latlng).setContent(getDistanceText()).openOn(map);
+      });
+
+      const midPoint = line.getCenter();
+      showLinePopup(midPoint.lat, midPoint.lng);
     }
   }
 );
