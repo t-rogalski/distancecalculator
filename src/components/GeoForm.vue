@@ -1,27 +1,27 @@
 <template>
-  <div class="formWrapper">
-    <form @submit.prevent="calculateDistance" :class="{ rolling: isRolling }">
-      <div class="coords">
-        <div class="input">
-          <label>Punkt A</label>
-          <input v-model.number="lat1" type="number" step="any" min="0" max="90" placeholder="Szerokość" required />
-        </div>
-        <div class="input">
-          <input v-model.number="lon1" type="number" step="any" min="0" max="180" placeholder="Długość" required />
-        </div>
+  <!-- <div class="formWrapper"> -->
+  <form @submit.prevent="calculateDistance">
+    <div class="coords">
+      <div class="input">
+        <label>Punkt A</label>
+        <input v-model.number="lat1" type="number" step="any" min="0" max="90" placeholder="Szerokość" required />
       </div>
-      <div class="coords">
-        <div class="input">
-          <label>Punkt B</label>
-          <input v-model.number="lat2" type="number" step="any" min="0" max="90" placeholder="Szerokość" required />
-        </div>
-        <div class="input">
-          <input v-model.number="lon2" type="number" step="any" min="0" max="180" placeholder="Długość" required />
-        </div>
+      <div class="input">
+        <input v-model.number="lon1" type="number" step="any" min="0" max="180" placeholder="Długość" required />
       </div>
-      <button type="submit" @click="addRollingClass">Oblicz odległość</button>
-    </form>
-  </div>
+    </div>
+    <div class="coords">
+      <div class="input">
+        <label>Punkt B</label>
+        <input v-model.number="lat2" type="number" step="any" min="0" max="90" placeholder="Szerokość" required />
+      </div>
+      <div class="input">
+        <input v-model.number="lon2" type="number" step="any" min="0" max="180" placeholder="Długość" required />
+      </div>
+    </div>
+    <button type="submit" @click="addRollingClass">Oblicz odległość</button>
+  </form>
+  <!-- </div> -->
 </template>
 
 <script setup>
@@ -42,8 +42,4 @@ const calculateDistance = async () => {
   const data = await res.json();
   emit('calculated', data);
 };
-
-function addRollingClass() {
-  isRolling.value = true;
-}
 </script>

@@ -24,6 +24,14 @@ onMounted(() => {
 
   markerA = L.marker([props.lat1, props.lon1]).addTo(map).bindPopup('Punkt A').openPopup();
   markerB = L.marker([props.lat2, props.lon2]).addTo(map).bindPopup('Punkt B');
+
+  line = L.polyline(
+    [
+      [props.lat1, props.lon1],
+      [props.lat2, props.lon2],
+    ],
+    { color: 'red', weight: 4 }
+  ).addTo(map);
 });
 
 watch(
