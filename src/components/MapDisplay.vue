@@ -25,12 +25,15 @@ function getDistanceText() {
 }
 
 function showLinePopup(lat, lon) {
-  L.popup().setLatLng([lat, lon]).setContent(getDistanceText()).openOn(map);
+  L.popup()
+    .setLatLng([lat, lon])
+    .setContent(`<div style="font-size: 1.5rem;"><strong>${getDistanceText()}</strong></div>`)
+    .openOn(map);
 }
 
 //Pinezki, linia
 onMounted(() => {
-  map = L.map('map').setView([props.lat1, props.lon1], 5);
+  map = L.map('map').setView([props.lat1, props.lon1], 6);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors',
@@ -56,9 +59,16 @@ onMounted(() => {
   line.on('click', function (e) {
     L.popup()
       .setLatLng(e.latlng)
-      .setContent(`Odległość: ${props.distanceKm.toFixed(3)} km`)
+      .setContent(
+        `<div style="font-size: 1.5rem;"><strong>Odległość: ${
+          props.unit === 'km' ? props.distanceKm.toFixed(3) + ' km' : (props.distanceKm * 1000).toFixed(2) + ' m'
+        }</strong></div>`
+      )
       .openOn(map);
   });
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 500);
 });
 
 // Aktualizuj popup gdy zmieni się jednostka lub współrzędne
@@ -91,6 +101,9 @@ watch(
       const midPoint = line.getCenter();
       showLinePopup(midPoint.lat, midPoint.lng);
     }
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 500);
   }
 );
 </script>

@@ -120,8 +120,9 @@ nav a {
   z-index: 100;
   padding: 0;
   height: 0;
+  opacity: 0;
   visibility: hidden;
-  transition: height 0.5s;
+  transition: height 0.3s, opacity 1s;
 }
 
 .dropdown-menu li {
@@ -142,6 +143,7 @@ nav a {
 
 .dropdown:hover .dropdown-menu,
 .dropdown:focus-within .dropdown-menu {
+  opacity: 1;
   visibility: visible;
 }
 
@@ -183,7 +185,6 @@ nav a {
   overflow: hidden;
   visibility: hidden;
   transition: height 0.5s;
-  z-index: 1200;
 }
 
 .dropdown-submenu:hover > .submenu,
