@@ -56,11 +56,6 @@ Aby uruchomić testy jednostkowe:
 npm run test
 ```
 
-## Wersja produkcyjna
-
-Aplikacja frontendowa może być hostowana na dowolnym hostingu statycznym (np. Netlify, Vercel).  
-Backend PHP wymaga hostingu obsługującego PHP – należy podać odpowiedni adres w zapytaniach `fetch` w pliku `GeoForm.vue`.
-
 ## Autor
 
 Projekt wykonał Tomasz Rogalski
