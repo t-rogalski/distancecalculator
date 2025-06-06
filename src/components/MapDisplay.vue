@@ -59,11 +59,7 @@ onMounted(() => {
   line.on('click', function (e) {
     L.popup()
       .setLatLng(e.latlng)
-      .setContent(
-        `<div style="font-size: 1.5rem;"><strong>Odległość: ${
-          props.unit === 'km' ? props.distanceKm.toFixed(3) + ' km' : (props.distanceKm * 1000).toFixed(2) + ' m'
-        }</strong></div>`
-      )
+      .setContent(`<div style="font-size: 1.5rem;"><strong>${getDistanceText()}</strong></div>`)
       .openOn(map);
   });
   setTimeout(() => {
