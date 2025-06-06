@@ -166,8 +166,16 @@ nav a {
   cursor: pointer;
 }
 
+.dropdown > a::after {
+  content: ' ⯆';
+}
+
 .dropdown-submenu {
   position: relative;
+}
+
+.dropdown-submenu > a::before {
+  content: '⯇ ';
 }
 
 .dropdown-submenu > .submenu {
