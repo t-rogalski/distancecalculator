@@ -11,6 +11,17 @@
   padding: 0.5rem;
   border-radius: 10px;
   font-size: clamp(1.25rem, 5vw, 2rem);
+  border: 2px solid #b8e0f7;
+  background: #fafdff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 1px 4px 0 rgba(58, 170, 220, 0.05);
+}
+
+.coords > div > input:focus {
+  outline: none;
+  border-color: #3aaadc;
+  box-shadow: 0 0 0 3px rgba(58, 170, 220, 0.18);
+  background: #f0faff;
 }
 
 input::-webkit-outer-spin-button,
@@ -23,15 +34,25 @@ form {
   align-items: center;
   flex-direction: column;
   border: 3px solid #3aaadc;
-  border-radius: 10px;
+  border-radius: 16px;
   padding: clamp(1rem, 3vw, 2rem);
   padding-bottom: clamp(1.5rem, 3vw, 3rem);
   max-height: fit-content;
+  background: linear-gradient(135deg, #eaf6fb 0%, #f7fbfd 100%);
+  box-shadow: 0 6px 24px 0 rgba(58, 170, 220, 0.1), 0 1.5px 6px 0 rgba(58, 170, 220, 0.08);
 }
 
 .input {
   display: flex;
   flex-direction: column;
+}
+
+.input label {
+  color: #2176ae;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 2px #eaf6fb;
 }
 
 button {
