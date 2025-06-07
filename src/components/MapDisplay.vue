@@ -27,7 +27,7 @@ function getDistanceText() {
 function showLinePopup(lat, lon) {
   L.popup()
     .setLatLng([lat, lon])
-    .setContent(`<div style="font-size: 1.5rem;"><strong>${getDistanceText()}</strong></div>`)
+    .setContent(`<div style="font-size: 1.1rem;"><strong>${getDistanceText()}</strong></div>`)
     .openOn(map);
 }
 
@@ -59,7 +59,7 @@ onMounted(() => {
   line.on('click', function (e) {
     L.popup()
       .setLatLng(e.latlng)
-      .setContent(`<div style="font-size: 1.5rem;"><strong>${getDistanceText()}</strong></div>`)
+      .setContent(`<div style="font-size: 1.1rem;"><strong>${getDistanceText()}</strong></div>`)
       .openOn(map);
   });
   setTimeout(() => {
