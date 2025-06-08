@@ -63,8 +63,8 @@ npm run test
 
 ## Zrzuty ekranu
 
-![Widok główny](screenshots/start.png)  
-![Widok główny](screenshots/wynik.png)
+![Widok główny](docs/screenshots/start.png)  
+![Widok główny](docs/screenshots/wynik.png)
 
 ## Autor
 
