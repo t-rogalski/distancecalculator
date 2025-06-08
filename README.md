@@ -22,20 +22,24 @@ Projekt wykonany w ramach zadania rekrutacyjnego.
 ## Uruchomienie lokalne
 
 1. **Klonuj repozytorium:**
+
    ```bash
    git clone https://github.com/t-rogalski/kalkulatorodleglosci.git
    cd kalkulatorodleglosci
    ```
 
 2. **Zainstaluj zależności:**
+
    ```bash
    npm install
    ```
 
 3. **Uruchom aplikację (frontend + backend PHP):**
+
    ```bash
    npm run dev
    ```
+
    - Frontend: http://localhost:5173
    - Backend PHP: http://localhost:8000
 
@@ -52,9 +56,15 @@ Projekt wykonany w ramach zadania rekrutacyjnego.
 ## Testowanie
 
 Aby uruchomić testy jednostkowe:
+
 ```bash
 npm run test
 ```
+
+## Zrzuty ekranu
+
+![Widok główny](screenshots/start.png)  
+![Widok główny](screenshots/wynik.png)
 
 ## Autor
 
