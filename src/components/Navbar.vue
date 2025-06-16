@@ -1,16 +1,16 @@
 <template>
   <nav>
     <div class="logo">
-      <a class="navbar-brand" href="https://ikol.pl/">
-        <img src="/logo-ikol1.png" alt="LOGO" />
-        <p>OCHRONA POJAZDÓW</p>
+      <a class="navbar-brand" href="#">
+        <img src="/logo.png" alt="LOGO" />
+        <p>COŚ DO LOGA</p>
       </a>
     </div>
     <div class="navbar">
       <div class="navup">
         <div>
           <p>Infolinia:</p>
-          <a href="#">(22) 19654 </a>
+          <a href="#">(22) 00000 </a>
         </div>
         <a href="#" class="signin">ZALOGUJ SIĘ</a>
         <button class="signup">ZAŁÓŻ KONTO</button>
@@ -18,45 +18,45 @@
       <div class="navdown">
         <ul class="navbar-links">
           <li class="dropdown">
-            <a href="#">Radiowe zabezpieczenie - SVR</a>
+            <a href="#">Ważna opcja numer 1</a>
             <ul class="dropdown-menu dropdown-menu-svr">
-              <li><a href="#">Opis systemu radiowego</a></li>
-              <li><a href="#">Oferta</a></li>
-              <li><a href="#">IKOL SVR Dashcam - Nowość!</a></li>
+              <li><a href="#">Podopcja numer 1</a></li>
+              <li><a href="#">Podopcja numer 2</a></li>
+              <li><a href="#">Podopcja numer 3</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#">Lokalizatory GPS</a>
+            <a href="#">Opcja numer 2</a>
             <ul class="dropdown-menu dropdown-menu-gps">
-              <li><a href="#">GPS do samochodu</a></li>
-              <li><a href="#">GPS dla flot</a></li>
-              <li><a href="#">Lokalizatory przenośne</a></li>
-              <li><a href="#">e-TOLL</a></li>
-              <li><a href="#">Lokalizacja telefonu</a></li>
-              <li><a href="#">Oferta</a></li>
+              <li><a href="#">Podopcja numer 1</a></li>
+              <li><a href="#">Podopcja numer 2</a></li>
+              <li><a href="#">Podopcja numer 3</a></li>
+              <li><a href="#">Podopcja numer 4</a></li>
+              <li><a href="#">Podopcja numer 5</a></li>
+              <li><a href="#">Podopcja numer 6</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#">Baza wiedzy</a>
+            <a href="#">Opcja numer 3</a>
             <ul class="dropdown-menu dropdown-menu-knowledge">
-              <li><a href="#">Niezagłuszalny system IKOL SVR</a></li>
-              <li><a href="#">Moduły IKOL dla pojazdów</a></li>
-              <li><a href="#">Lokalizatory IKOL przenośne</a></li>
-              <li><a href="#">Nasze odzyskania</a></li>
+              <li><a href="#">Podopcja numer 1</a></li>
+              <li><a href="#">Podopcja numer 2</a></li>
+              <li><a href="#">Podopcja numer 3</a></li>
+              <li><a href="#">Podopcja numer 4</a></li>
               <li class="dropdown-submenu">
-                <a href="#">Nasze aplikacje</a>
+                <a href="#">Podopcja numer 5</a>
                 <ul class="submenu">
-                  <li><a href="#">Aplikacja IKOL Tracer</a></li>
-                  <li><a href="#">Aplikacja IKOL X</a></li>
+                  <li><a href="#">Podpodopcja numer 1</a></li>
+                  <li><a href="#">Podpodopcja numer 2</a></li>
                 </ul>
               </li>
-              <li><a href="#">Usługi dodatkowe</a></li>
-              <li><a href="#">Nasze rozwiązania</a></li>
-              <li><a href="#">Lista pojazdów CAN (marki A do L)</a></li>
-              <li><a href="#">Lista pojazdów CAN (marki M do Z)</a></li>
-              <li><a href="#">Filmy</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">API IKOL</a></li>
+              <li><a href="#">Podopcja numer 1</a></li>
+              <li><a href="#">Podopcja numer 2</a></li>
+              <li><a href="#">Podopcja numer 3</a></li>
+              <li><a href="#">Podopcja numer 4</a></li>
+              <li><a href="#">Podopcja numer 5</a></li>
+              <li><a href="#">Podopcja numer 6</a></li>
+              <li><a href="#">Podopcja numer 7</a></li>
             </ul>
           </li>
           <li><a href="#">Blog</a></li>

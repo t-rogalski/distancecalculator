@@ -91,7 +91,10 @@ watch(
 
       // Dodaj obsługę kliknięcia na nowej linii
       line.on('click', function (e) {
-        L.popup().setLatLng(e.latlng).setContent(getDistanceText()).openOn(map);
+        L.popup()
+          .setLatLng(e.latlng)
+          .setContent(`<div style="font-size: 1.1rem;"><strong>${getDistanceText()}</strong></div>`)
+          .openOn(map);
       });
 
       const midPoint = line.getCenter();
