@@ -24,8 +24,8 @@ Projekt wykonany w ramach zadania rekrutacyjnego.
 1. **Klonuj repozytorium:**
 
    ```bash
-   git clone https://github.com/t-rogalski/kalkulatorodleglosci.git
-   cd kalkulatorodleglosci
+   git clone https://github.com/t-rogalski/distancecalculator.git
+   cd distancecalculator
    ```
 
 2. **Zainstaluj zależności:**
