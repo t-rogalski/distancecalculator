@@ -68,8 +68,7 @@ npm run test
 
 ## Autor
 
-Projekt wykonał Tomasz Rogalski  
-Wykonano w ramach zadania rekrutacyjnego.
+Projekt wykonał Tomasz Rogalski.
 
 ---
 
